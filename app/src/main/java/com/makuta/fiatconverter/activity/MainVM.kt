@@ -11,6 +11,7 @@ import com.makuta.fiatconverter.CurrencyList
 import com.makuta.fiatconverter.api.ApiService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import org.json.JSONObject
 
 class MainVM : ViewModel(){
 
@@ -28,7 +29,20 @@ class MainVM : ViewModel(){
 
     fun loadList(){
         viewModelScope.launch(Dispatchers.IO){
-            _list.postValue(service.list())
+            val jsRaw = service.list().toString()
+            val jsObj = JSONObject(jsRaw)
+            val data = mutableMapOf<String,String>()
+            jsObj.keys().forEach {
+                val value = jsObj.getJSONObject(it)
+                if(value.has("currency_name") && value.has("currency_code")) {
+                    val name = value.getString("currency_name")
+                    val code = value.getString("currency_code")
+                    if (code.length == 3) {
+                        data[code] = name.replaceFirstChar { c -> c.uppercase() }
+                    }
+                }
+            }
+            _list.postValue(data.toSortedMap())
         }
     }
 

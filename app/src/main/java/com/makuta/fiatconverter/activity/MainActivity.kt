@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material3.BottomSheetDefaults
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Divider
@@ -142,7 +143,7 @@ class MainActivity : ComponentActivity() {
             }
         }
         if(sheetState.isVisible) {
-            ModalBottomSheet(onDismissRequest = {  }, sheetState = sheetState, modifier = Modifier.fillMaxSize()) {
+            ModalBottomSheet(onDismissRequest = {}, sheetState = sheetState,dragHandle = { BottomSheetDefaults.DragHandle() }) {
                 if (list.value != null) {
                     val map = list.value!!
                     val values = map.keys
@@ -174,7 +175,6 @@ class MainActivity : ComponentActivity() {
                     }
                 } else {
                     CircularProgressIndicator(modifier = Modifier.align(Alignment.CenterHorizontally))
-
                 }
             }
         }
@@ -183,7 +183,7 @@ class MainActivity : ComponentActivity() {
     private fun genResult(resp : CurrencyData?, currencyFrom : String, currencyTo : String, amount : String) : String {
         return if (resp != null) {
             val m = resp[currencyTo.lowercase()]!! * amount.toDouble()
-            "$amount ${currencyFrom.uppercase()} = $m ${currencyTo.uppercase()}"
+            "$amount ${currencyFrom.uppercase()} = ${ "%.2f".format(m) } ${currencyTo.uppercase()}"
         }else
             ""
     }
