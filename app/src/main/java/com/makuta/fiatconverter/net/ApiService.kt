@@ -1,11 +1,9 @@
-package com.makuta.fiatconverter.api
+package com.makuta.fiatconverter.net
 
 import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.scalars.ScalarsConverterFactory
-import java.util.concurrent.TimeUnit
 
 class ApiService {
 
@@ -14,13 +12,8 @@ class ApiService {
     }
 
     fun provideService() : ApiInterface{
-        val httpLoggingInterceptor = HttpLoggingInterceptor()
-        httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
-
         val okHttpClient = OkHttpClient.Builder()
-            .addInterceptor(httpLoggingInterceptor)
-            .readTimeout(60, TimeUnit.SECONDS)
-            .connectTimeout(60, TimeUnit.SECONDS)
+            .addInterceptor(AuthInterceptor())
             .build()
 
         return Retrofit.Builder()

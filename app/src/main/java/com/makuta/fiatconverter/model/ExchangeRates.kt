@@ -1,4 +1,4 @@
-package com.makuta.fiatconverter.models
+package com.makuta.fiatconverter.model
 
 data class ExchangeRates(
     val timestamp : Long,

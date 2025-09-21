@@ -1,4 +1,4 @@
-package com.makuta.fiatconverter.activity
+package com.makuta.fiatconverter.vm
 
 import androidx.lifecycle.ViewModel
 

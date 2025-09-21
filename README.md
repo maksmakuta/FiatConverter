@@ -1,9 +1,9 @@
 # FiatConverter
 
- App to convert currency, rates and exchange
+ App to convert currency, rates and exchange  
  Uses API from https://openexchangerates.org/
 
 ## Author
 
- Maks Makuta
+ Maks Makuta  
  MIT Licence
