@@ -1,17 +1,13 @@
 package com.makuta.fiatconverter.api
 
-import com.google.gson.JsonObject
+import com.makuta.fiatconverter.models.ExchangeRates
+import kotlinx.coroutines.flow.Flow
 import retrofit2.http.GET
-import retrofit2.http.Path
 
 interface ApiInterface {
 
-    @GET("country.json")
-    suspend fun list() : JsonObject
+    @GET("latest.json")
+    fun getRates() : Flow<ExchangeRates>
 
-    @GET("latest/currencies/{name}.json")
-    suspend fun convert(
-        @Path("name") curr : String
-    ) : JsonObject
 
 }

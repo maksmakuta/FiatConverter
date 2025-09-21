@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit
 class ApiService {
 
     companion object{
-        private const val BASE_URL = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/"
+        private const val BASE_URL = "https://openexchangerates.org/api/"
     }
 
     fun provideService() : ApiInterface{
