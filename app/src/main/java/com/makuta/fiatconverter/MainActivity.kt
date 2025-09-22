@@ -10,6 +10,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.makuta.fiatconverter.ui.screen.RatesScreen
 import com.makuta.fiatconverter.ui.theme.AppTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,34 +19,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             AppTheme {
-                SampleScreen()
+                RatesScreen()
             }
         }
-    }
-}
-
-@Composable
-fun SampleScreen() {
-    Surface(
-        tonalElevation = 2.dp,
-        modifier = androidx.compose.ui.Modifier.fillMaxSize()
-    ) {
-        androidx.compose.material3.Text("Hello, AppTheme!", style = MaterialTheme.typography.titleLarge, modifier = androidx.compose.ui.Modifier.padding(16.dp))
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun PreviewLight() {
-    AppTheme(darkTheme = false) {
-        SampleScreen()
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun PreviewDark() {
-    AppTheme(darkTheme = true) {
-        SampleScreen()
     }
 }
