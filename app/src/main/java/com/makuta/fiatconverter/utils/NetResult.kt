@@ -1,4 +1,4 @@
-package com.makuta.fiatconverter.net
+package com.makuta.fiatconverter.utils
 
 import retrofit2.HttpException
 
