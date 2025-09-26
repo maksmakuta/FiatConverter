@@ -10,8 +10,8 @@ import com.makuta.fiatconverter.ui.theme.AppTheme
 class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         setContent {
             AppTheme {
                 ConvertScreen()
