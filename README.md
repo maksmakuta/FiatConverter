@@ -20,6 +20,8 @@ Dark Theme
 | ![3](screenshots/Screenshot_20250928-145753_FiatConverter.png) | ![4](screenshots/Screenshot_20250928-145801_FiatConverter.png) |
 
 
+[Old design here](screenshots/Screenshot_20240201_153407.png)
+
 ### How to build
 
  1. Clone this repository
