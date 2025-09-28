@@ -1,7 +1,25 @@
 # FiatConverter
 
- App to convert currency, rates and exchange  
+ Simple app to convert currency created with Android Compose technology
  
+### Screenshots
+
+ Light Theme
+
+ |                                                                |                                                                | 
+ |----------------------------------------------------------------|----------------------------------------------------------------|
+ | ![1](screenshots/Screenshot_20250928-145703_FiatConverter.png) | ![2](screenshots/Screenshot_20250928-145708_FiatConverter.png) |
+ | ![3](screenshots/Screenshot_20250928-145714_FiatConverter.png) | ![4](screenshots/Screenshot_20250928-145724_FiatConverter.png) |
+
+
+Dark Theme
+
+|                                                                |                                                                | 
+|----------------------------------------------------------------|----------------------------------------------------------------|
+| ![1](screenshots/Screenshot_20250928-145740_FiatConverter.png) | ![2](screenshots/Screenshot_20250928-145748_FiatConverter.png) |
+| ![3](screenshots/Screenshot_20250928-145753_FiatConverter.png) | ![4](screenshots/Screenshot_20250928-145801_FiatConverter.png) |
+
+
 ### How to build
 
  1. Clone this repository
