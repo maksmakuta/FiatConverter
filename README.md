@@ -34,7 +34,8 @@ Dark Theme
 
 ### Thanks to
 
-<a href="https://unirateapi.com">Exchange Rates By UniRateAPI</a>
+<a href="https://unirateapi.com">Exchange Rates By UniRateAPI</a>  
+[FlagCDN](https://flagcdn.com) for simple and fast api for flags images
 
 ## Author
 
